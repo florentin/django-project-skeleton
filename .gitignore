@@ -1,0 +1,16 @@
+# ignore everything under the parent directory
+/*
+
+# except for the following
+!/project/
+!/help/
+!/static/
+!/media/
+!/setup/
+!/README.md
+!.git*
+
+# ignore all pyc files
+*.pyc
+
+

@@ -1,0 +1,17 @@
+{% load i18n %}<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ LANGUAGE_CODE|default:'en' }}" lang="{{ LANGUAGE_CODE|default:'en' }}">
+    <head>
+        <title>{% block head_title %}{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+        <link href="http://yui.yahooapis.com/combo?3.4.1/build/cssreset/reset-min.css&3.4.1/build/cssfonts/fonts-min.css&3.4.1/build/cssgrids/grids-min.css&3.4.1/build/cssbase/base-min.css" rel="stylesheet" type="text/css"/>
+        {% block head_meta_base %}{% block head_meta %}{% endblock %}{% endblock %}
+    </head>
+    <body {% block body_attr %}{% endblock %}>
+    {% block header_base %}{% block header %}{% endblock %}{% endblock %}
+    {% block menu_base %}{% block menu %}{% endblock %}{% endblock %}
+    {% block content_base %}{% block content %}{% endblock %}{% endblock %}
+    {% block footer_base %}{% block footer %}{% endblock %}{% endblock %}
+    {% block closure_base %}{% block closure %}{% endblock %}{% endblock %}
+    </body>
+</html>
