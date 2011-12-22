@@ -1,23 +1,4 @@
-@body-color: #FFF;
-@anchor-color: #000;
-@font-color: #000;
-@font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
-
-@header-color: #2D9B27;
-@menu-color: #6EE768;
-@content-color: #0ACF00;
-@footer-color: #2D9B27;
-@footer-text-color: #FFF;
-
-@heading-family: Rockwell, Georgia, Palatino Linotype, Palatino, "Times New Roman", Times, serif;
-@heading-color: #000;
-
-@corner-size: 5px;
-@shadow-color: #DEDEDE;
-@bg-color: #FFF;
-
-@border-color: #2BA025;
-@border-size: 1px;
+@import "conf.less";
 
 html {
 	body {
@@ -28,97 +9,17 @@ html {
 		color: @font-color;
 	}
 }
-a {
-	color: @anchor-color;
-	text-decoration: none;
-}
-h1, h2, h3, h4, h5, h6 {
-	font-family: @heading-family;
-	color: @heading-color;
-	margin: 0.5em 0;
-}
-h1 {
-	font-size: 190%;
-}
-h2 {
-	font-size: 160%;
-}
-h3 {
-	font-size: 130%;
-}
-blockquote {
-	font-style:italic;
-	background:#eee;
-	padding:.4em 1em .7em 1em;
-	margin:.7em 0;
-	border:1px solid #dedede;
-}
-code {
-	font-size:1.1em;
-	font-family:"Bitstream Vera Sans Mono", Monaco, "Lucida Console", monospace;
-}
-hr {
-	border:1px solid #ccc;
-	margin: 0px;
-}
-pre {
-	overflow:auto; width:500px; 
-	padding:1em 1.5em; 
-	margin:1em 0; 
-	font-size:1.2em; 
-	white-space:pre-wrap; /* css3 */
-}
-dl {}
-dt {
-	font-weight:bold;
-}
-dd {
-	padding-left:1em;
-}
 
-/* ------ TABLES ------ /*
-table {
-	margin:.5em 0;
-}
-table th {
-	color:#000;
-}
-table td, table th {
-	padding:.5em .7em;
-}
-table th {
-	background:#ddd; text-transform:uppercase; border-bottom:1px transparent;
-}
-table td {
-	background:#ccc;
-}
-table tr.even td {
-	background:#bbb;
-}
-table tr:hover td {
-	background:#ccc;
-}
+@import "basics.less";
+@import "tables.less";
+@import "forms.less";
 
-/* ------ FORMS ------ */
-fieldset {padding:1.2em; border:1px dashed #a8ef9d;}
-legend {padding:.2em .8em; font-size:1.2em; text-transform:capitalize;}
-input, textarea, select {font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif; margin:.2em 0; color:#222; font-size:1em; border:1px solid #ddd;}
-input, textarea {padding:.3em;}
-input.radio, input.checkbox {padding:2px;}
-form label {font-weight:bold; display:block;}
-input[type="text"], input[type="password"], textarea {
-	width: 22em;
-}
-p {
-	margin-bottom: 0px;
-}
-#header, #menu, #content, #footer {
+#header, #nav, #content, #footer {
 	width: 980px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-/* ------ BOXES ------ */
 .shadows {
 	-moz-box-shadow: 0px 0px 3px @shadow-color;
 	-webkit-box-shadow: 0px 0px 3px @shadow-color;
@@ -163,27 +64,4 @@ p {
 	text-align: right;
 }
 
-/* ------------------------ */
-.box {
-	.corners;
-	.borders;
-	padding: 5px;
-}
-
-.box_header {
-	.box;
-	background-color: @header-color;
-}
-.box_menu {
-	.box;
-	background-color: @menu-color;
-}
-.box_content {
-	.box;
-	background-color: @content-color;
-}
-.box_footer {
-	.box;
-	background-color: @footer-color;
-	color: @footer-text-color;
-}
+@import "boxes.less";

@@ -16,8 +16,8 @@ urlpatterns += patterns("",
     url(r"^$", direct_to_template, {"template": "pages/home.html"}, name="home"),
     url(r'^robots\.txt$', direct_to_template, 
         {'template': 'robots.txt', 'mimetype': 'text/plain'}),
-    url(r'^googlexxx.html$', direct_to_template, 
-        {'template': 'googlexxx.html', 'mimetype': 'text/html'}),
+    url(r'^google.html$', direct_to_template, 
+        {'template': 'google.html', 'mimetype': 'text/html'}),
 )
 
 # --- Staticfiles urls ---
