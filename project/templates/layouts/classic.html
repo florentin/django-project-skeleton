@@ -1,8 +1,10 @@
 {% block doctype %}<!DOCTYPE html>{% endblock doctype %}
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{{ LANGUAGE_CODE|default:'en' }}" lang="{{ LANGUAGE_CODE|default:'en' }}">
+<html {% block html_attr %}{% endblock %}>
     <head>
+        {% block head_base %}
         <title>{% block head_title_text %}Welcome{% endblock %}</title>
-        {% block head %}{% endblock head %}
+        {% block head %}{% endblock %}
+        {% endblock head_base %}
     </head>
     <body {% block body_attr %}{% endblock %}>
 	    {% block messages_base %}{% block messages %}{% endblock messages %}{% endblock messages_base %}
@@ -12,3 +14,4 @@
 	    {% block closure_base %}{% block closure %}{% endblock closure %}{% endblock closure_base %}
     </body>
 </html>
+
